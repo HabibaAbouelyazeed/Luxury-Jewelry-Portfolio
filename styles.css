@@ -2,6 +2,22 @@
     margin: 0;
     padding: 0;
 }
+
+@media only screen and (max-width: 400px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media only screen and (max-width: 350px) {
+    html {
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width: 300px) {
+    html {
+        font-size: 10px;
+    }
+}
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -20,6 +36,12 @@ footer img {
     width: 5rem;
 }
 
+/*header ==>START*/
+header{
+    text-align: center;
+    padding: 0.25em 0;
+}
+
 header img{
     display: block;
     margin: 0 auto;
@@ -28,13 +50,20 @@ header img{
     
 }
 
+#header-info{
+    font-size: small;
+}
+/*header ==>END*/
+
 /*nav bar==>START*/
 nav ul{
+    width: 75vw;
     list-style-type: none;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 25%;
+    margin: 0 auto;
+    padding: 0.25rem 0;
 }
 
 ul li{
@@ -62,8 +91,74 @@ ul li{
     background-color: white;
 }
 /*nav bar==>END*/
+
+/*main ==>START*/
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+/*promotion banner*/
+#banner-holder{
+    width: 100vw;
+}
+
+#promotion-banner{
+    min-height: 20rem;
+    background-image: url("assets/banner-hand.jpg") ;
+    background-color: antiquewhite;
+    background-position: center;
+    background-size: cover;
+}
+
+#promotion-banner p{
+    color: white;
+    text-align: right;
+}
+/*=======================*/
+
+/*main content*/
+#main-content{
+    display: flex;
+    width: 90vw;
+    justify-content: space-between;
+    margin: 2em auto;
+}
+
+.cards-holder{
+    width: 90vw;
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    max-width: 20rem;
+    margin: 0.5rem;
+    /*width: 10rem;
+    height: 20rem;*/
+    background-color: blanchedalmond;
+    border-radius: 5%;
+    box-shadow: 0 0 2rem 0.25rem #8b8b8be7;
+}
+
+.card img{
+    padding: 0.5em;
+}
+.card p{
+    padding: 0.5em;
+}
+/*main ==>END*/
+
+/*footer ==>START*/
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20%;
+}
+/*footer ==>END*/
