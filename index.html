@@ -9,7 +9,8 @@
 </head>
 <body>
     <header>
-        <i id="header-info">Catch our sales before it runs out on may,2023</i>
+        <i class="header-info">Shop at a wide collection of jewelery that fits your ocassion.</i>
+        <i class="header-info">Catch our sales before it runs out on may,2023.</i>
         <img src="assets/Asset 2@3x.png" alt="Main logo">
     </header>
     <nav>
@@ -29,9 +30,25 @@
     </nav>
     <main>
         <article id="banner-holder">
-            <div id="promotion-banner">
-                <p>Shop at a wide collection of jewelery that fits your ocassion</p>
+            <div class="banner-slider fade">
+                <div class="slider-text">1 / 3</div>
+                <img src="assets/jewel-banner-1.PNG" alt="banner" id="promotion-banner">
             </div>
+            <div class="banner-slider fade">
+                <div class="slider-text">2 / 3</div>
+                <img src="assets/jewel-banner-2.PNG" alt="banner" id="promotion-banner">
+            </div>
+            <div class="banner-slider fade">
+                <div class="slider-text">3 / 3</div>
+                <img src="assets/jewel-banner-3.PNG" alt="banner" id="promotion-banner">
+            </div>
+            <div id="dot-holder">
+                <span class="slide-dot"></span> 
+                <span class="slide-dot"></span> 
+                <span class="slide-dot"></span> 
+            </div>
+        </article>
+
         <article id="main-content">
             <div class="cards-holder">
                 <div class="card">
@@ -55,12 +72,14 @@
         </article>
     </main>
     <footer>
-        <div>
+        <div class="footer-logo">
             <img src="assets/Asset 1@3x.png" alt="footer logo">
         </div>
         <div>
             copyrights
         </div>
     </footer>
+
+<script src="script.js"></script>
 </body>
 </html>

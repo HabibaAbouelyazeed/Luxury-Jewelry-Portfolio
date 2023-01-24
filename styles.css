@@ -25,16 +25,12 @@ a{
     text-decoration: none;
     color: black;
 }
-img{
-    width: 20rem;
-}
-header{background-color: antiquewhite;}
+
+/*header{background-color: antiquewhite;}
 nav{background-color: aqua;}
 main{background-color: aquamarine;}
-footer{background-color: blueviolet;}
-footer img {
-    width: 5rem;
-}
+footer{background-color: blueviolet;}*/
+
 
 /*header ==>START*/
 header{
@@ -50,7 +46,7 @@ header img{
     
 }
 
-#header-info{
+.header-info{
     font-size: small;
 }
 /*header ==>END*/
@@ -101,20 +97,56 @@ main{
 
 /*promotion banner*/
 #banner-holder{
-    width: 100vw;
+    width: 90vw;
+}
+
+.banner-slider{
+    position: relative;
+    display: none;
+}
+.slider-text{
+    color: white;
+    position: absolute;
+    font-size: 1rem;
+    padding: 1em;
 }
 
 #promotion-banner{
-    min-height: 20rem;
-    background-image: url("assets/banner-hand.jpg") ;
-    background-color: antiquewhite;
-    background-position: center;
-    background-size: cover;
+    width: 100%;
 }
 
-#promotion-banner p{
-    color: white;
-    text-align: right;
+#dot-holder{
+    display: flex;
+    width: fit-content;
+    margin: 0.5rem auto;
+    justify-content:space-around;
+}
+.slide-dot{
+    width: 1rem;
+    height: 1rem;
+    background-color: #b1b1b1e7;
+    border-radius: 50%;
+    margin: 0.25em;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+  }
+
+/*banner slideshow animation*/
+.fade{
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from{
+        opacity: 0.4;
+    }
+    to{
+        opacity: 1;
+    }
 }
 /*=======================*/
 
@@ -157,8 +189,16 @@ main{
 
 /*footer ==>START*/
 footer{
+    min-height: 10rem;
     display: flex;
     justify-content: space-between;
     padding: 0 20%;
+    background-color: #574a23da;
+
+}
+
+.footer-logo img{
+    width: 10rem;
+    margin-top: 1rem;
 }
 /*footer ==>END*/
