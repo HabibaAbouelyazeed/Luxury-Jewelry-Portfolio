@@ -3,6 +3,11 @@
     padding: 0;
 }
 
+:root {
+    --gold: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%),radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
+    --gold2: radial-gradient(ellipse farthest-corner at right bottom, #fedb375e 0%, #fdb931a6 8%, #9f792899 30%, #8a6e2f8f 40%, transparent 80%);
+}
+
 @media only screen and (max-width: 400px) {
     html {
         font-size: 14px;
@@ -52,6 +57,16 @@ header img{
 /*header ==>END*/
 
 /*nav bar==>START*/
+nav{
+    position: sticky;
+    top: 0;
+    /*background: var(--gold);*/
+    background-color: rgb(250, 240, 207);
+    margin: 1rem 0;
+    border: solid 0.5px var(--gold);
+    box-shadow: 0 0 4rem 0.25rem var(--gold);
+    z-index: 999999;
+}
 nav ul{
     width: 75vw;
     list-style-type: none;
@@ -59,25 +74,29 @@ nav ul{
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    padding: 0.25rem 0;
+    z-index:-1
 }
 
 ul li{
-    padding: 0.25rem;
+    padding: 1rem;
     font-weight: bold;
+    transition: all 0.5s ease-in;
 }
 
 .dropdown-Menu{
     display: none;
     position: absolute;
+    animation: fade 0.5s ;
 }
+
 .dropdown-Menu a{
     text-decoration: none;
     color: black;
     font-weight: lighter;
+    background-color: rgb(255, 252, 242);
     padding: 1em;
 }
-.dropdown-Menu a:hover{
+.dropdown-Menu a:hover, ul li:hover{
     background-color: rgb(175, 174, 174);
 }
 
@@ -85,6 +104,7 @@ ul li{
     display: flex;
     flex-direction: column;
     background-color: white;
+    transition: ease 4sec;
 }
 /*nav bar==>END*/
 
@@ -165,25 +185,51 @@ main{
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    position: relative;
 }
 
 .card{
     display: flex;
     flex-direction: column;
     max-width: 20rem;
-    margin: 0.5rem;
-    /*width: 10rem;
-    height: 20rem;*/
-    background-color: blanchedalmond;
+    min-height: 30rem;
+    margin: 1rem;
     border-radius: 5%;
     box-shadow: 0 0 2rem 0.25rem #8b8b8be7;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0.25rem;
+    background: var(--gold2);
+    transition: all 1s ease;
 }
 
-.card img{
-    padding: 0.5em;
+.card:hover{
+    transform: scale(1.1);
 }
+
+.img-holder{
+    width: 95%;
+    height: 15em;
+    background-color: azure;
+    border-radius: inherit;
+    background-position: center;
+    background-size: cover;
+}
+
 .card p{
     padding: 0.5em;
+}
+.necklace{
+    background-image: url(assets/necklace.jpg);
+}
+.ring{
+    background-image: url(assets/ring.jpg);
+}
+.bracelete{
+    background-image: url(assets/bracelete.jpg);
+}
+.earring{
+    background-image: url(assets/earrings-2.jpg);
 }
 /*main ==>END*/
 
@@ -193,7 +239,7 @@ footer{
     display: flex;
     justify-content: space-between;
     padding: 0 20%;
-    background-color: #574a23da;
+    background: var(--gold);
 
 }
 
