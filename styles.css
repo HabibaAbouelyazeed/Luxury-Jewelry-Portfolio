@@ -31,11 +31,10 @@ a{
     color: black;
 }
 
-/*header{background-color: antiquewhite;}
-nav{background-color: aqua;}
-main{background-color: aquamarine;}
-footer{background-color: blueviolet;}*/
 
+html{
+    scroll-behavior: smooth;
+}
 
 /*header ==>START*/
 header{
@@ -175,7 +174,7 @@ main{
     display: flex;
     width: 90vw;
     justify-content: space-between;
-    margin: 2em auto;
+    margin: 4em auto;
 }
 
 .cards-holder{
@@ -231,6 +230,150 @@ main{
 .earring{
     background-image: url(assets/earrings-2.jpg);
 }
+
+
+/*Product Slider ==>START*/
+
+.products-slider{
+    margin: 1rem 2rem;
+}
+
+.slider-container{
+    position: relative;
+    margin: 4rem 1rem;
+    padding: 1rem;
+    overflow: hidden; 
+    padding-top: 3rem;
+}
+
+
+.slider-name{
+    margin: 1rem;
+}
+
+.back-button, .next-button{
+    position: absolute;
+    z-index: 10;
+    height: 100%;
+    border: none;
+    opacity: 0.5;
+    background-color: rgba(255, 255, 255, 0.568);
+}
+
+.back-button{
+    left: 0;
+}
+
+.next-button{
+    right: 0;
+}
+
+.back-button:hover, .next-button:hover{
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.363);
+    cursor: pointer;
+}
+
+.slider-cards-container{
+    display: flex;
+    flex: 0 0 auto;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 90vw;
+    padding: 0 2rem;
+}
+
+.slider-cards-container::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-card{
+    margin: 0 1rem;
+}
+
+.product-image{
+    position: relative;
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+}
+
+.product-thumb{
+    width: 100%;
+}
+
+.discount-tag{
+    position: absolute;
+    right: 0rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    background-color: white;
+    color: red;
+    border-radius: 5px;
+}
+
+.wishlist-button{
+    position: absolute;
+    bottom: 0;
+    width: 75%;
+    margin: 1rem 0;
+    padding: 0.75rem  0;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.product-image:hover .wishlist-button{
+    opacity: 1;
+}
+
+.wishlist-button:hover{
+    background-color: rgb(250, 240, 207);
+}
+
+.product-info{
+    display: flex;
+    flex-direction: column;
+}
+
+.product-price{
+    font-weight: bold;
+    font-size: larger;
+}
+
+.actual-price{
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/*Product Slider ==>END* */
+
+#scrollTop{
+    padding: 0.75rem;
+    border: none;
+    background-color: rgb(250, 240, 207);
+    border-radius: 50%;
+    position: sticky;
+    bottom: 2rem;
+    z-index: 100;
+    margin-left: 90%;
+    margin-bottom: 1rem;
+    transition: 0.5s;
+}
+
+#scrollTop img{
+    width: 2rem;
+    height: 2rem;
+}
+
+#scrollTop:hover{
+    cursor: pointer;
+    background-color: rgb(189, 181, 156);;
+}
+
 /*main ==>END*/
 
 /*footer ==>START*/
